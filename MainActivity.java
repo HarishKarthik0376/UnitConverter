@@ -19,11 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.kgtopound);
-        View button1 = findViewById(R.id.gtokg);
+        View button1 = findViewById(R.id.kgtog);
         View button2 = findViewById(R.id.poundtokg);
         View button3 = findViewById(R.id.mtocm);
         View button4 = findViewById(R.id.Cmtom);
         View button5 = findViewById(R.id.cmtoinch);
+        View button6 = findViewById(R.id.inchtocm);
+        View button7 = findViewById(R.id.gtokg);
+        View button8 = findViewById(R.id.inchtom);
+        View button9 = findViewById(R.id.mtoinch);
 
         textView = findViewById(R.id.textView3);
         editText = findViewById(R.id.editTextText2);
@@ -84,6 +88,46 @@ public class MainActivity extends AppCompatActivity {
                 String s = editText.getText().toString();
                 int newcm1 = Integer.parseInt(s);
                 double result1 = newcm1*0.393701;
+                textView.setText("The Corresponding Value In Inches Is "+ result1);
+            }
+        });
+        button6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Converted!!", Toast.LENGTH_SHORT).show();
+                String s = editText.getText().toString();
+                int newinch1 = Integer.parseInt(s);
+                double result1 = newinch1*2.54;
+                textView.setText("The Corresponding Value In Cm Is "+ result1);
+            }
+        });
+        button7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Converted!!", Toast.LENGTH_SHORT).show();
+                String s = editText.getText().toString();
+                int newg1 = Integer.parseInt(s);
+                double result1 = newg1*0.001;
+                textView.setText("The Corresponding Value In Kg Is "+ result1);
+            }
+        });
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Converted!!", Toast.LENGTH_SHORT).show();
+                String s = editText.getText().toString();
+                int newinch1 = Integer.parseInt(s);
+                double result1 = newinch1*0.0254;
+                textView.setText("The Corresponding Value In M Is "+ result1);
+            }
+        });
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Converted!!", Toast.LENGTH_SHORT).show();
+                String s = editText.getText().toString();
+                int newm2 = Integer.parseInt(s);
+                double result1 = newm2*39.3701;
                 textView.setText("The Corresponding Value In Inches Is "+ result1);
             }
         });
